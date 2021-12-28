@@ -1,10 +1,11 @@
 import "./App.css";
-
+import React from "react";
+import LandingPage from "./components/LandingPage";
 function App() {
   return (
-    <div className="App">
-      <h1>Welcome to One Click Chess</h1>
-    </div>
+    <>
+      <LandingPage />
+    </>
   );
 }
 
