@@ -9,19 +9,29 @@ img.play {
   transform: translate(-50%, -50%);
 }
 
-img.github {
-  max-width: 3.5%;
-  height: auto;
+svg.github {
+  width: 90px;
   position: absolute;
-  right: 80px;
-  bottom: 0px;
+  right: 180px;
+  bottom: 2px;
 }
 
-img.medium {
-  max-width: 3.2%;
-  height: auto;
-  border-radius: 55%;
+svg.medium {
+  width: 85px;
+  border-radius: 20%;
   position: absolute;
-  right: 25px;
+  right: 35px;
   bottom: 1px;
+}
+/*   min-width: 3.2%;
+  max-width: 4.8%;
+  height: auto; 
+*/
+
+svg.medium:hover {
+  filter: invert(48%) sepia(76%) saturate(2764%) hue-rotate(86deg)
+    brightness(118%) contrast(119%);
+}
+svg.github:hover {
+  fill: red;
 }
