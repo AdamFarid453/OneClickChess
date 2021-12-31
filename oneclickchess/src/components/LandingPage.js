@@ -8,7 +8,6 @@ const LandingPage = () => {
   const [showLogin, setShowResults] = useState(false);
   const onClick = () => {
     setShowResults(true);
-    console.log("clicked on play");
   };
   const onClick2 = () => {
     setShowResults(false);
