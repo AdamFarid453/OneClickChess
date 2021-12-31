@@ -1,5 +1,6 @@
 import React from "react";
-
+// import Test from "./Test";
+import { Link } from "react-router-dom";
 const JoinGame = () => {
   return (
     <div className="formButtons">
@@ -8,7 +9,13 @@ const JoinGame = () => {
           <input type="text" placeholder="Enter your username" />
         </label>
       </form>
-      <button>Join game</button>
+      <Link
+        className="btn btn-primary"
+        to={"/createGame"}
+        state={{ test: "hi" }}
+      >
+        Create Game
+      </Link>
     </div>
   );
 };
