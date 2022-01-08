@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import Paper from "@mui/material/Paper";
@@ -27,16 +27,36 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     position: "absolute",
-    bottom: -500,
+    bottom: -200,
     left: "40%",
     width: "10%",
+  },
+
+  friendText: {
+    position: "absolute",
+    bottom: 175,
   },
 }));
 
 const Test = () => {
   const classes = useStyles();
   const location = useLocation();
+  const [style, setStyle] = useState("botText");
+  const [style2, setStyle2] = useState("friendText");
+
   //console.log(location);
+  function handleKing() {
+    console.log("clicked on king");
+    setStyle("botText2");
+  }
+  function handleQueen() {
+    console.log("clicked on queen");
+    setStyle2("friendText2");
+  }
+  // selected(e) {
+  //   let target = e.currentTarget;
+  //   target.classList.toggle("selected");
+  // }
   let name = location.state.username.value;
   return (
     <div className="App">
@@ -44,10 +64,13 @@ const Test = () => {
 
       <div className={classes.root}>
         <Paper className={classes.customBorderRadius}>
-          <div className={classes.centerPieces}>
-            <King className="king" />
-            <Typography>Play vs. Bot</Typography>
-
+          <div>
+            <div className={style} onClick={handleKing}>
+              <King className="king" />
+              <Typography>Play vs. Bot</Typography>
+            </div>
+          </div>
+          <div className={style2} onClick={handleQueen}>
             <Queen className="queen" />
             <Typography>Play vs. Friend</Typography>
           </div>

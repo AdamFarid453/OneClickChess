@@ -18,6 +18,35 @@ svg.queen {
   top: -50px;
   position: absolute;
 }
+/* svg.queen:hover {
+  opacity: 0;
+  transition: opacity 1s ease;
+} */
+/* .selected {
+  border: 1px solid blue;
+} */
+
+.botText {
+  margin-top: 250px;
+  display: "flex";
+  justify-content: "center";
+  left: 10px;
+}
+.botText2 {
+  box-sizing: border-box;
+  border: solid 2px blue;
+}
+.friendText {
+  margin-top: 250px;
+  display: "flex";
+  justify-content: "center";
+  left: 10px;
+}
+.friendText2 {
+  box-sizing: border-box;
+  border: solid 2px black;
+}
+
 div.formButtons {
   position: absolute;
   top: 55%;
