@@ -19,22 +19,15 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 25,
     margin: theme.spacing(1),
     width: theme.spacing(112),
+
     height: theme.spacing(72),
   },
-  centerPieces: {
-    display: "flex",
-    justifyContent: "center",
-  },
+
   button: {
     position: "absolute",
     bottom: -200,
     left: "40%",
     width: "10%",
-  },
-
-  friendText: {
-    position: "absolute",
-    bottom: 175,
   },
 }));
 
@@ -65,15 +58,17 @@ const Test = () => {
       <div className={classes.root}>
         <Paper className={classes.customBorderRadius}>
           <div>
-            <div className={style} onClick={handleKing}>
-              <King className="king" />
-              <Typography>Play vs. Bot</Typography>
-            </div>
+            <King className="king" className={style} onClick={handleKing} />
+            <Typography style={{ marginTop: "20px" }}>Play vs. Bot</Typography>
           </div>
-          <div className={style2} onClick={handleQueen}>
-            <Queen className="queen" />
-            <Typography>Play vs. Friend</Typography>
+
+          <div>
+            <Queen className="queen" className={style2} onClick={handleQueen} />
+            <Typography style={{ marginTop: "20px" }}>
+              Play vs. Friend
+            </Typography>
           </div>
+
           <Button
             style={{
               backgroundColor: "#000000",

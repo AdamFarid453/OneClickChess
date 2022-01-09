@@ -8,16 +8,20 @@ svg.play {
   left: 49.8%;
   transform: translate(-50%, -50%);
 }
-svg.king {
+/* svg.king {
   width: 200px;
   position: absolute;
   top: -300px;
-}
+} */
 svg.queen {
   width: 190px;
   top: -50px;
   position: absolute;
 }
+/* svg.queen:hover {
+  box-sizing: border-box;
+  border: solid 1px red;
+} */
 /* svg.queen:hover {
   opacity: 0;
   transition: opacity 1s ease;
@@ -26,25 +30,29 @@ svg.queen {
   border: 1px solid blue;
 } */
 
-.botText {
-  margin-top: 250px;
+.botText2 {
+  margin-top: 0px;
   display: "flex";
   justify-content: "center";
-  left: 10px;
-}
-.botText2 {
   box-sizing: border-box;
   border: solid 2px blue;
 }
 .friendText {
-  margin-top: 250px;
-  display: "flex";
-  justify-content: "center";
-  left: 10px;
+  margin-top: 70px;
 }
 .friendText2 {
+  margin-top: 70px;
   box-sizing: border-box;
   border: solid 2px black;
+}
+
+.botText:hover {
+  border: solid 1px blue;
+  box-sizing: border-box;
+}
+.friendText:hover {
+  border: solid 1px black;
+  box-sizing: border-box;
 }
 
 div.formButtons {
