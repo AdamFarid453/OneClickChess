@@ -13,14 +13,12 @@ const useStyles = makeStyles((theme) => ({
     //background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
     display: "flex",
     justifyContent: "center",
-
     //boxShadow: "0 3px 5px 2px rgba(0, 0, 0, .2)",
   },
   customBorderRadius: {
     borderRadius: 25,
     margin: theme.spacing(1),
     width: theme.spacing(112),
-
     height: theme.spacing(72),
   },
 
@@ -53,10 +51,7 @@ const Test = () => {
   function printState() {
     console.log(finalState);
   }
-  // selected(e) {
-  //   let target = e.currentTarget;
-  //   target.classList.toggle("selected");
-  // }
+
   let name = location.state.username.value;
   return (
     <div className="App">
@@ -75,20 +70,22 @@ const Test = () => {
               Play vs. Friend
             </Typography>
           </div>
-
-          <Button
-            style={{
-              backgroundColor: "#000000",
-              color: "#ffffff",
-              borderColor: "#ffffff",
-              boxShadow: "0px 4px 10px lightgrey",
-            }}
-            className={classes.button}
-            variant="outlined"
-            onClick={printState}
-          >
-            Next
-          </Button>
+          <Link to={"/createGame/bot"} state={{ matchType: { finalState } }}>
+            <Button
+              style={{
+                backgroundColor: "#000000",
+                color: "#ffffff",
+                borderColor: "#ffffff",
+                boxShadow: "0px 4px 10px lightgrey",
+              }}
+              className={classes.button}
+              variant="outlined"
+              onClick={printState}
+              disabled={finalState === ""}
+            >
+              Next
+            </Button>
+          </Link>
           <Link to={"/"}>
             <ArrowBackIcon
               style={{
