@@ -7,6 +7,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import { ReactComponent as King } from "../images/King.svg";
 import { ReactComponent as Queen } from "../images/Queen.svg";
 import Button from "@mui/material/Button";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 const useStyles = makeStyles((theme) => ({
   root: {
     //background: "linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)",
@@ -25,7 +26,7 @@ const useStyles = makeStyles((theme) => ({
 
   button: {
     position: "absolute",
-    bottom: -200,
+    bottom: -50,
     left: "40%",
     width: "10%",
   },
@@ -36,15 +37,21 @@ const Test = () => {
   const location = useLocation();
   const [style, setStyle] = useState("botText");
   const [style2, setStyle2] = useState("friendText");
+  const [finalState, setFinalState] = useState("");
 
   //console.log(location);
   function handleKing() {
     console.log("clicked on king");
     setStyle("botText2");
+    setFinalState("bot");
   }
   function handleQueen() {
     console.log("clicked on queen");
     setStyle2("friendText2");
+    setFinalState("friend");
+  }
+  function printState() {
+    console.log(finalState);
   }
   // selected(e) {
   //   let target = e.currentTarget;
@@ -78,15 +85,24 @@ const Test = () => {
             }}
             className={classes.button}
             variant="outlined"
+            onClick={printState}
           >
             Next
           </Button>
+          <Link to={"/"}>
+            <ArrowBackIcon
+              style={{
+                position: "absolute",
+                top: 120,
+                left: 300,
+                color: "black",
+                height: "40px",
+                width: "40px",
+              }}
+            />
+          </Link>
         </Paper>
       </div>
-
-      <Link to={"/"}>
-        <h3>Click here to go back</h3>
-      </Link>
     </div>
   );
 };
