@@ -3,15 +3,15 @@ import { useState } from "react";
 // import Test from "./Test";
 import { Link } from "react-router-dom";
 const JoinGame = () => {
-  const [value, setValue] = useState("");
-  const handleSubmit = (e) => setValue(e.target.value);
+  const [user, setUser] = useState("");
+  const handleSubmit = (e) => setUser(e.target.value);
   return (
     <div className="formButtons">
       <form onSubmit={handleSubmit}>
         <label>
           <input
             type="text"
-            value={value}
+            value={user}
             placeholder="Enter your username"
             onChange={handleSubmit}
           />
@@ -20,7 +20,7 @@ const JoinGame = () => {
       <Link
         className="btn btn-primary"
         to={"/createGame"}
-        state={{ username: { value } }}
+        state={{ username: { user } }}
       >
         Create Game
       </Link>

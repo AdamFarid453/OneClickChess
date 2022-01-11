@@ -89,3 +89,27 @@ svg.medium:hover {
 svg.github:hover {
   fill: red;
 }
+
+div.container {
+  margin: 50px;
+}
+span.x {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 1px black;
+  background: black;
+  color: white;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+span.x:hover {
+  color: black;
+  border: solid 3px black;
+  background: white;
+}
+#a {
+}

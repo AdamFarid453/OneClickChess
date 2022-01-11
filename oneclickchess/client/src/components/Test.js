@@ -52,7 +52,9 @@ const Test = () => {
     console.log(finalState);
   }
 
-  let name = location.state.username.value;
+  let name = location.state.username.user;
+  let uppercase = name.charAt(0).toUpperCase() + name.slice(1);
+  name = uppercase;
   return (
     <div className="App">
       <h1>Welcome to One Click Chess {name}</h1>
@@ -70,7 +72,7 @@ const Test = () => {
               Play vs. Friend
             </Typography>
           </div>
-          <Link to={"/createGame/bot"} state={{ matchType: { finalState } }}>
+          <Link to={`/createGame/${finalState}`} state={{ username: { name } }}>
             <Button
               style={{
                 backgroundColor: "#000000",
