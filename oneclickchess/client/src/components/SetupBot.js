@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
   button: {
     position: "absolute",
-    bottom: "-32rem",
+    bottom: "-16rem",
     left: "40%",
     width: "10%",
   },
@@ -33,8 +33,40 @@ const SetupBot = () => {
   const classes = useStyles();
   let user = location.state.username.name;
   const [selected, setSelected] = useState("");
+  const [selected1, setSelected1] = useState("x");
+  const [selected2, setSelected2] = useState("x");
+  const [selected3, setSelected3] = useState("x");
+  const [selected4, setSelected4] = useState("x");
+  const [selected5, setSelected5] = useState("x");
+  const [selected6, setSelected6] = useState("x");
+  const [selected7, setSelected7] = useState("x");
+  const [selected8, setSelected8] = useState("x");
   function handleClick() {
     setSelected("");
+  }
+  function selectOne() {
+    setSelected1("a");
+  }
+  function selectTwo() {
+    setSelected2("b");
+  }
+  function selectThree() {
+    setSelected3("c");
+  }
+  function selectFour() {
+    setSelected4("d");
+  }
+  function selectFive() {
+    setSelected5("e");
+  }
+  function selectSix() {
+    setSelected6("f");
+  }
+  function selectSeven() {
+    setSelected7("g");
+  }
+  function selectEight() {
+    setSelected8("h");
   }
   return (
     <div className="App">
@@ -45,30 +77,42 @@ const SetupBot = () => {
             Choose your level of difficulty
           </Typography>
           <div className="container">
-            <span className="x" id="a" onClick={handleClick}>
+            <span className={selected1} onClick={selectOne}>
               1
             </span>
-            <span className="x" id="b">
+            <span className={selected2} onClick={selectTwo}>
               2
             </span>
-            <span className="x" id="c">
+            <span className={selected3} onClick={selectThree}>
               3
             </span>
-            <span className="x" id="d">
+            <span className={selected4} onClick={selectFour}>
               4
             </span>
-            <span className="x" id="e">
+            <span className={selected5} onClick={selectFive}>
               5
             </span>
-            <span className="x" id="f">
+            <span className={selected6} onClick={selectSix}>
               6
             </span>
-            <span className="x" id="g">
+            <span className={selected7} onClick={selectSeven}>
               7
             </span>
-            <span className="x" id="h">
+            <span className={selected8} onClick={selectEight}>
               8
             </span>
+          </div>
+          <div className="textBox">
+            <Typography
+              variant="h3"
+              component="h3"
+              style={{ marginTop: "100px" }}
+            >
+              Play as...
+            </Typography>
+            <span className="x">Black</span>
+            <span className="x">?</span>
+            <span className="x">White</span>
           </div>
           <Link to={`/`} state={{ username: { user } }}>
             <Button

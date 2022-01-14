@@ -111,5 +111,101 @@ span.x:hover {
   border: solid 3px black;
   background: white;
 }
-#a {
+
+/* Lord have mercy for whoever reads this in the future */
+span.a {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+span.b {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+span.c {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+span.d {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+span.e {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+span.f {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+span.g {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+span.h {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
 }
