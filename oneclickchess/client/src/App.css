@@ -209,3 +209,40 @@ span.h {
   cursor: pointer;
   box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
 }
+span.white {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+
+span.black {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}
+span.random {
+  border-radius: 2.5px;
+  margin: 18px;
+  font-size: 40px;
+  box-sizing: border-box;
+  border: solid 3px blue;
+  background: while;
+  color: black;
+  padding: 0 2.5px 0 2.5px;
+  cursor: pointer;
+  box-shadow: 0 1px 5px 2px rgba(0, 0, 0, 0.2);
+}

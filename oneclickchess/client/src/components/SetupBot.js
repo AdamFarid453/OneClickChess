@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 
   button: {
     position: "absolute",
-    bottom: "-16rem",
+    bottom: "-3rem",
     left: "40%",
     width: "10%",
   },
@@ -32,7 +32,13 @@ const SetupBot = () => {
   const location = useLocation();
   const classes = useStyles();
   let user = location.state.username.name;
-  const [selected, setSelected] = useState("");
+  const [selected, setSelected] = useState(0);
+  const [selectedColor, setSelectedColor] = useState("");
+  console.log(selected, selectedColor);
+
+  const [selectedWhite, setSelectedWhite] = useState("x");
+  const [selectedBlack, setSelectedBlack] = useState("x");
+  const [selectedRandom, setSelectedRandom] = useState("x");
   const [selected1, setSelected1] = useState("x");
   const [selected2, setSelected2] = useState("x");
   const [selected3, setSelected3] = useState("x");
@@ -41,32 +47,50 @@ const SetupBot = () => {
   const [selected6, setSelected6] = useState("x");
   const [selected7, setSelected7] = useState("x");
   const [selected8, setSelected8] = useState("x");
-  function handleClick() {
-    setSelected("");
-  }
+
   function selectOne() {
     setSelected1("a");
+    setSelected(1);
   }
   function selectTwo() {
     setSelected2("b");
+    setSelected(2);
   }
   function selectThree() {
     setSelected3("c");
+    setSelected(3);
   }
   function selectFour() {
     setSelected4("d");
+    setSelected(4);
   }
   function selectFive() {
     setSelected5("e");
+    setSelected(5);
   }
   function selectSix() {
     setSelected6("f");
+    setSelected(6);
   }
   function selectSeven() {
     setSelected7("g");
+    setSelected(7);
   }
   function selectEight() {
     setSelected8("h");
+    setSelected(8);
+  }
+  function selectWhite() {
+    setSelectedWhite("white");
+    setSelectedColor("white");
+  }
+  function selectBlack() {
+    setSelectedBlack("black");
+    setSelectedColor("black");
+  }
+  function selectRandom() {
+    setSelectedRandom("random");
+    setSelectedColor("random");
   }
   return (
     <div className="App">
@@ -110,11 +134,26 @@ const SetupBot = () => {
             >
               Play as...
             </Typography>
-            <span className="x">Black</span>
-            <span className="x">?</span>
-            <span className="x">White</span>
           </div>
-          <Link to={`/`} state={{ username: { user } }}>
+          <div className="container">
+            <span className={selectedBlack} onClick={selectBlack}>
+              Black
+            </span>
+            <span className={selectedRandom} onClick={selectRandom}>
+              ?
+            </span>
+            <span className={selectedWhite} onClick={selectWhite}>
+              White
+            </span>
+          </div>
+          <Link
+            to={`/createGame/bot/game`}
+            state={{
+              username: user,
+              level: selected,
+              color: selectedColor,
+            }}
+          >
             <Button
               style={{
                 backgroundColor: "#000000",
@@ -124,6 +163,7 @@ const SetupBot = () => {
               }}
               className={classes.button}
               variant="outlined"
+              disabled={selected === 0 || selectedColor === ""}
             >
               Next
             </Button>
